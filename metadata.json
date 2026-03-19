@@ -1,0 +1,5 @@
+{
+  "name": "Employee Management System",
+  "description": "A full-stack application for managing employees with user authentication and MongoDB integration.",
+  "requestFramePermissions": []
+}
