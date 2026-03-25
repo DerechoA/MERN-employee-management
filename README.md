@@ -38,7 +38,7 @@ Configuration
 Create a `.env` file in the project root with:
 
 ```env
-MONGODB_URI=mongodb+srv://derechoalexisoffcl_db_user:vxLJPddilGBuvmmj@cluster0.pwybbim.mongodb.net/?appName=Cluster0
+MONGODB_URI=mongodb+srv://SAMPLEpwybbim.mongodb.net/?appName=Cluster0
 JWT_SECRET=secret
 PORT=3000
 ```
