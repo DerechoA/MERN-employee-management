@@ -92995,7 +92995,7 @@ var require_main = __commonJS({
   }
 });
 
-// server.ts
+// backend/server.ts
 var import_express = __toESM(require_express2(), 1);
 var import_mongoose = __toESM(require_mongoose2(), 1);
 var import_jsonwebtoken = __toESM(require_jsonwebtoken(), 1);
@@ -94723,12 +94723,12 @@ var bcryptjs_default = {
   decodeBase64
 };
 
-// server.ts
+// backend/server.ts
 var import_cors = __toESM(require_lib9(), 1);
 var import_path = __toESM(require("path"), 1);
 var import_dotenv = __toESM(require_main(), 1);
 var import_vite = require("vite");
-import_dotenv.default.config();
+import_dotenv.default.config({ path: "./backend/.env" });
 var MONGODB_URI = process.env.MONGODB_URI;
 if (!MONGODB_URI) {
   console.error("ERROR: MONGODB_URI is not set in .env file");
@@ -94846,7 +94846,8 @@ async function startServer() {
   if (process.env.NODE_ENV !== "production") {
     const vite = await (0, import_vite.createServer)({
       server: { middlewareMode: true },
-      appType: "spa"
+      appType: "spa",
+      configFile: "frontend/vite.config.ts"
     });
     app.use(vite.middlewares);
   } else {

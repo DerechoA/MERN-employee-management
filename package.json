@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx server.ts",
-    "build": "vite build && npx esbuild server.ts --bundle --platform=node --outfile=dist/server.cjs --format=cjs --external:vite",
+    "dev": "tsx backend/server.ts",
+    "build": "cd frontend && vite build && cd .. && npx esbuild backend/server.ts --bundle --platform=node --outfile=dist/server.cjs --format=cjs --external:vite",
     "start": "NODE_ENV=production node dist/server.cjs",
-    "preview": "vite preview",
+    "preview": "cd frontend && vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },

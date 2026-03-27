@@ -7,7 +7,7 @@ import path from 'path';
 import dotenv from 'dotenv';
 import { createServer as createViteServer } from 'vite';
 
-dotenv.config();
+dotenv.config({ path: './backend/.env' });
 
 const MONGODB_URI = process.env.MONGODB_URI;
 if (!MONGODB_URI) {
@@ -152,6 +152,7 @@ async function startServer() {
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
+      configFile: 'frontend/vite.config.ts',
     });
     app.use(vite.middlewares);
   } else {
