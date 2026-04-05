@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx backend/server.ts",
+    "dev": "node backend/src/server.js",
     "build": "cd frontend && vite build && cd .. && npx esbuild backend/server.ts --bundle --platform=node --outfile=dist/server.cjs --format=cjs --external:vite",
     "start": "NODE_ENV=production node dist/server.cjs",
     "preview": "cd frontend && vite preview",

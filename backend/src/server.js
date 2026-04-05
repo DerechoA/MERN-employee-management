@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import employeeRoutes from './routes/employees.js';
 
-dotenv.config({ path: '../.env' }); // adjust path
+dotenv.config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
 if (!MONGODB_URI) {
