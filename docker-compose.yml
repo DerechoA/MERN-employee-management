@@ -26,7 +26,7 @@ services:
       dockerfile: Dockerfile
     container_name: mern_frontend
     ports:
-      - "3000:80"
+      - "3001:80"
     depends_on:
       - backend
     restart: unless-stopped
